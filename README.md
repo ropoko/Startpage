@@ -1,4 +1,4 @@
 # Startpage
 Minimalist and useful startpage
 
-![](https://raw.githubusercontent.com/ropoko/Startpage/main/img/background.jpg)
+![](https://github.com/ropoko/Startpage/blob/main/img/screenshot.png)
