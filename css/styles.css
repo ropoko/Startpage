@@ -18,7 +18,7 @@ body {
     grid-area: container;
     height: 100%;
     display: flex;
-    text-align: justify;
+    text-align: center;
     align-items: center;
     flex-direction: column;
     margin-right: 3em;
