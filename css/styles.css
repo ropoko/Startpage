@@ -1,0 +1,158 @@
+body {
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-areas: 'box container container container' 'box container container container' 'box container container container';
+    margin: 0;
+}
+
+#box {
+    grid-area: box;
+    height: 100vh;
+    display: inline-block;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.container {
+    grid-area: container;
+    height: 100%;
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 3em;
+    margin-bottom: -2em;
+}
+
+#clock {
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Overpass', sans-serif;
+    color: white;
+    margin-top: 7px;
+}
+
+#search-field {
+    text-align: center;
+    align-items: center;
+    margin-left: 6px;
+}
+
+.search {
+    display: flex;
+    position: relative;
+    height: 35px;
+    width: 35px;
+    box-sizing: border-box;
+    margin: 0px 8px 7px 0px;
+    padding: 7px 9px 5px 9px;
+    border: 3px solid white;
+    border-radius: 25px;
+    transition: all 300ms ease;
+    cursor: text;
+}
+
+.search:after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 20px;
+    right: -5px;
+    top: 21px;
+    border-radius: 3px;
+    transform: rotate(-45deg);
+    transition: all 200ms ease;
+}
+
+.active, .search:hover {
+    width: 200px;
+    margin-right: 0px;
+}
+
+input {
+    width: 100%;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    color: white;
+    background: transparent;
+    outline-width: 0px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-box {
+    height: 19vh;
+    width: 5em;
+    padding: 0 2em 3em 2em;
+    margin: 2em;
+    border-radius: 15px;
+    box-shadow: 0 0 1em white;
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    background-color: transparent;
+    transition: background-color 1s;
+}
+
+.container-box header {
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.container-box a {
+    text-decoration: none;
+    transition: color 1s;
+    color: white;
+    transition: font-weight 0.01s;
+}
+
+.container-box .content {
+    text-align: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: 'icon1 icon2' 'icon3 icon4';
+}
+
+.container-box > .content > .icon1 {
+    grid-area: icon1;
+}
+
+.container-box > .content > .icon2 {
+    grid-area: icon2;
+}
+
+.container-box > .content > .icon3 {
+    grid-area: icon3;
+}
+
+.container-box > .content > .icon4 {
+    grid-area: icon4;
+}
+
+.container-box .content a i {
+    font-size: 2em;
+    margin-top: 5px;
+}
+
+.container-box:hover {
+    color: rgb(40, 38, 62);
+    background-color: white;
+}
+
+.container-box:hover a {
+    color: rgb(40, 38, 62);
+}
+
+.container-box a:hover {
+    font-weight: bold;
+}
