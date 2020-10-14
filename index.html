@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="fontAwesome/css/all.min.css">
+    <link rel="stylesheet" href="css/notes.css">
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -24,6 +26,7 @@
     </div>
 
     <div id="box">
+        <input type="button" value="Add note" id="add-note" onclick="createNote('text')" />
         <div class="container-box">
             <header>social</header>
             <hr />
@@ -58,12 +61,24 @@
         </div>
     </div>
 
+    <div class="divNotes">
+        <main id="notes">
+        </main>
+    </div>
+
     <script type="text/javascript" src="js/clock.js"></script>
-    <script type="text/javascript" src="js/weather.js"></script>
     <script type="text/javascript" src="js/search.js"></script>
+    <script type="text/javascript" src="js/notes/notes.js"></script>
 
     <script>
         window.onload = () => {
+            getNotes();
+
+            var arrayNotes = document.getElementsByClassName('note_text');
+            for (let i = 0; i < arrayNotes.length; i++) {
+                Drag(i)
+            }
+
             document.getElementById("clock").innerHTML = getTime();
             // Set clock interval to tick clock
             setInterval(() => {
@@ -71,6 +86,28 @@
             }, 100);
 
             document.getElementById("message").innerHTML = defineMessage();
+        };
+        window.onbeforeunload = function () {
+            removeAll();
+
+            var arrayNotes = document.getElementsByClassName('note_text');
+
+            if (arrayNotes == null) {
+                console.log('nada para excluir!');
+                return;
+            }
+
+            for (let i = 0; i < arrayNotes.length; i++) {
+                var text = document.getElementsByClassName('note_text').item(i).innerHTML;
+                var top = document.getElementsByClassName('note').item(i).style.top;
+                var left = document.getElementsByClassName('note').item(i).style.left;
+
+                if (text == null || text == '<br>' || text == 'text') {
+                    remove(i);
+                }
+
+                saveNotes(i, text, left, top);
+            }
         };
     </script>
 </body>
