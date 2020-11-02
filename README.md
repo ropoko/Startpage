@@ -9,3 +9,5 @@ Now you can add a note by clicking on button and drag the note wherever you want
 It was made with localStorage, so if you disabled it, you can not use the notes.
 
 [Learn how to enable localStorage here](https://techglimpse.com/enable-localstorage-support-google-chrome-browser/)
+
+[Check out!](https://startpage-git-main.ropoko.vercel.app/)
