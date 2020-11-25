@@ -3,6 +3,12 @@ Minimalist and useful startpage
 
 ![](https://github.com/ropoko/Startpage/blob/main/img/screenshot.png)
 
+## TO-DO List
+- [] Make it an Angular Project
+- [] Dynamic background
+- [] Change theme Light/Dark
+- [] Improve layout (clean)
+
 ## Notes
 Now you can add a note by clicking on button and drag the note wherever you want and the notes will be there even if you close the browser
 
