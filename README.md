@@ -4,7 +4,7 @@ Minimalist and useful startpage
 ![](https://github.com/ropoko/Startpage/blob/main/img/screenshot.png)
 
 ## TO-DO List
-- [ ] Make it an Angular Project
+- [ ] Make it a React Project
 - [ ] Dynamic background
 - [ ] Change theme Light/Dark
 - [ ] Improve layout (clean)
