@@ -6,16 +6,16 @@ function getTime() {
         hour = date.getHours();
 
     if (hour >= 5 && hour < 12) {
-        message = 'Bom dia!';
+        message = 'Good Morning!';
     }
     else if (hour >= 12 && hour < 19) {
-        message = 'Boa tarde!';
+        message = 'Good Afternoon!';
     }
     else if (hour >= 19) {
-        message = 'Boa noite!';
+        message = 'Good Evening!';
     }
     else if (hour >= 00 && hour < 5) {
-        message = 'Boa madrugada!';
+        message = 'Good Night!';
     }
 
     return (

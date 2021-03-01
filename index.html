@@ -1,115 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="fontAwesome/css/all.min.css">
-    <link rel="stylesheet" href="css/notes.css">
-    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@200&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <title>Bem vindo</title>
+    
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    
+    <title>Ropoko | Inicio</title>
 </head>
 
 <body>
     <div class="container">
         <div id="clock"></div>
-        <div id="search-field">
-            <label class="search" id="label_search" for="inpt_search">
-                <input id="inpt_search" type="text" />
-            </label>
-        </div>
-        <h1 id="message"></h1>
-    </div>
-
-    <div id="box">
-        <input type="button" value="Add note" id="add-note" onclick="createNote('text')" />
-        <div class="container-box">
-            <header>social</header>
-            <hr />
-            <div class="content">
-                <div class="icon1">
-                    <a href="https://twitter.com/home"><i class="fab fa-twitter"></i></a>
-                </div>
-                <div class="icon2">
-                    <a href="https://www.reddit.com/"><i class="fab fa-reddit"></i></a>
-                </div>
-                <div class="icon3">
-                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="container-box">
-            <header>?</header>
-            <hr />
-            <a href="#">?</a>
-        </div>
-        <div class="container-box">
-            <header>dev</header>
-            <hr />
-            <div class="content">
-                <div class="icon1">
-                    <a href="https://github.com/"><i class="fab fa-github"></i></a>
-                </div>
-                <div class="icon2">
-                    <a href="https://stackoverflow.com/"><i class="fab fa-stack-overflow"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="divNotes">
-        <main id="notes">
-        </main>
     </div>
 
     <script type="text/javascript" src="js/clock.js"></script>
-    <script type="text/javascript" src="js/search.js"></script>
-    <script type="text/javascript" src="js/notes/notes.js"></script>
-
     <script>
         window.onload = () => {
-            getNotes();
-
-            var arrayNotes = document.getElementsByClassName('note_text');
-            for (let i = 0; i < arrayNotes.length; i++) {
-                Drag(i)
-            }
-
             document.getElementById("clock").innerHTML = getTime();
+
             // Set clock interval to tick clock
             setInterval(() => {
                 document.getElementById("clock").innerHTML = getTime();
-            }, 100);
+            }, 30000);
 
             document.getElementById("message").innerHTML = defineMessage();
-        };
-        window.onbeforeunload = function () {
-            removeAll();
-
-            var arrayNotes = document.getElementsByClassName('note_text');
-
-            if (arrayNotes == null) {
-                console.log('nada para excluir!');
-                return;
-            }
-
-            for (let i = 0; i < arrayNotes.length; i++) {
-                var text = document.getElementsByClassName('note_text').item(i).innerHTML;
-                var top = document.getElementsByClassName('note').item(i).style.top;
-                var left = document.getElementsByClassName('note').item(i).style.left;
-
-                if (text == null || text == '<br>' || text == 'text') {
-                    remove(i);
-                }
-
-                saveNotes(i, text, left, top);
-            }
-        };
+        }
     </script>
+   
 </body>
 
 </html>

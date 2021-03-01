@@ -1,0 +1,12 @@
+.container {
+    height: 100vh;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#clock {
+    font-size: 9rem;
+    font-weight: 600;
+    color: whitesmoke;
+}
