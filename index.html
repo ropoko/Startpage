@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/index.css" />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Ropoko | Inicio</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <div id="clock"></div>
+      <div id="clock"></div>    
         <div id="search">
             <input id="input_search" type="text" />
         </div>
@@ -27,18 +29,17 @@
     <script type="text/javascript" src="js/search.js"></script>
 
     <script>
-        window.onload = () => {
-            document.getElementById('input_search').focus();
+      window.onload = () => {
+        document.getElementById("input_search").focus();
 
-            document.getElementById("clock").innerHTML = getTime();
+        document.getElementById("clock").innerHTML = getTime();
 
-            // Set clock interval to tick clock
-            setInterval(() => {
-                document.getElementById("clock").innerHTML = getTime();
-            }, 30000);
-        }
+        // Set clock interval to tick clock
+        setInterval(() => {
+          document.getElementById("clock").innerHTML = getTime();
+        }, 30000);
+      };
     </script>
-   
-</body>
 
+  </body>
 </html>

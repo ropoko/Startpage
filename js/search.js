@@ -12,6 +12,12 @@ document.addEventListener("keyup", (event) => {
     }
 });
 
+document.addEventListener("keyup", (event) => {
+    if (event.keyCode == 27) {
+        input.value = '';
+    }
+});
+
 function search(value) {
     let url = 'https://duckduckgo.com/?q=';
 

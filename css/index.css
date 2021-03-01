@@ -20,8 +20,22 @@
     outline: none;
 }
 
+#search ul img {
+    width: 30px;
+}
+
+/* #search select::-ms-expand {
+    display: none; 
+}
+
+#search select {
+    -webkit-appearance: none;
+    appearance: none;
+} */
+
 #clock {
     font-size: 9rem;
     font-weight: 600;
     color: whitesmoke;
 }
+

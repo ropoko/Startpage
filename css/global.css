@@ -1,6 +1,17 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+::-moz-selection {
+    background-color: rgb(32, 35, 41);
+    color: #FFA000;
+}
+
+::selection {
+    background-color: rgb(32, 35, 41);
+    color: #FFA000;
 }
 
 body {
