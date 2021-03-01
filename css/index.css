@@ -2,7 +2,22 @@
     height: 100vh;    
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+
+    flex-direction: column;
+}
+
+#search input {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 2rem;
+
+    border: none;
+    background-color: #1f1e1e;
+    color: rgb(235, 223, 223);
+}
+
+#search input:focus {
+    outline: none;
 }
 
 #clock {

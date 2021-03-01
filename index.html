@@ -18,19 +18,24 @@
 <body>
     <div class="container">
         <div id="clock"></div>
+        <div id="search">
+            <input id="input_search" type="text" />
+        </div>
     </div>
 
     <script type="text/javascript" src="js/clock.js"></script>
+    <script type="text/javascript" src="js/search.js"></script>
+
     <script>
         window.onload = () => {
+            document.getElementById('input_search').focus();
+
             document.getElementById("clock").innerHTML = getTime();
 
             // Set clock interval to tick clock
             setInterval(() => {
                 document.getElementById("clock").innerHTML = getTime();
             }, 30000);
-
-            document.getElementById("message").innerHTML = defineMessage();
         }
     </script>
    
