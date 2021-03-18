@@ -7,6 +7,10 @@
     flex-direction: column;
 }
 
+.container h2 {
+    color: whitesmoke;
+}
+
 #search input {
     font-family: 'JetBrains Mono', monospace;
     font-size: 2rem;
@@ -24,18 +28,8 @@
     width: 30px;
 }
 
-/* #search select::-ms-expand {
-    display: none; 
-}
-
-#search select {
-    -webkit-appearance: none;
-    appearance: none;
-} */
-
 #clock {
     font-size: 9rem;
     font-weight: 600;
     color: whitesmoke;
 }
-

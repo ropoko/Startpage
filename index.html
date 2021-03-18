@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/index.css" />
@@ -19,7 +19,8 @@
 
   <body>
     <div class="container">
-      <div id="clock"></div>    
+      <h2 id="message"></h2>
+      <div id="clock"></div>
         <div id="search">
             <input id="input_search" type="text" />
         </div>
@@ -33,6 +34,7 @@
         document.getElementById("input_search").focus();
 
         document.getElementById("clock").innerHTML = getTime();
+        document.getElementById("message").innerText = defineMessage();
 
         // Set clock interval to tick clock
         setInterval(() => {

@@ -5,7 +5,10 @@ function getTime() {
         min = date.getMinutes(),
         hour = date.getHours();
 
-    if (hour >= 5 && hour < 12) {
+    if (hour >= 00 && hour < 5) {
+        message = 'Good Night!';
+    }
+    else if (hour >= 5 && hour < 12) {
         message = 'Good Morning!';
     }
     else if (hour >= 12 && hour < 19) {
@@ -14,15 +17,11 @@ function getTime() {
     else if (hour >= 19) {
         message = 'Good Evening!';
     }
-    else if (hour >= 00 && hour < 5) {
-        message = 'Good Night!';
-    }
 
     return (
-        "" +
-        (hour < 10 ? "0" + hour : hour) +
-        ":" +
-        (min < 10 ? "0" + min : min)
+        (hour < 10 ? "0" + hour : hour) 
+        + ":" 
+        + (min < 10 ? "0" + min : min)
     );
 }
 

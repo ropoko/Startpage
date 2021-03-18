@@ -21,5 +21,5 @@ document.addEventListener("keyup", (event) => {
 function search(value) {
     let url = 'https://duckduckgo.com/?q=';
 
-    window.open(url + value);
+    window.location = url + value;
 }

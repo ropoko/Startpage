@@ -18,3 +18,15 @@ body {
     font-family: 'JetBrains Mono', monospace;
     background: rgb(20, 20, 20);
 }
+
+@media(max-width: 1080px) {
+    html {
+        font-size: 90%;
+    }
+}
+
+@media(max-width: 720px) {
+    html {
+        font-size: 82%;
+    }
+}
