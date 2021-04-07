@@ -19,7 +19,14 @@ document.addEventListener("keyup", (event) => {
 });
 
 function search(value) {
-    let url = 'https://duckduckgo.com/?q=';
+    let search_service = document.getElementById('search_select').value;
 
-    window.location = url + value;
+    if (search_service.match('startpage')) {
+        let url = search_service.replace('SEARCH', value);
+        window.location = url;
+        
+        return;
+    }
+
+    window.location = search_service + value;
 }

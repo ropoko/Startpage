@@ -24,39 +24,47 @@
 }
 
 .sidenav a:hover {
-    color: whitesmoke;
+  color: whitesmoke;
 }
 
 .sidenav main {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidenav main .item {
-    display: flex;
-    align-items: center;
-    margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
 }
 
 .sidenav main .item h3 {
-    margin: 10px;
+  margin: 10px;
+}
+
+.sidenav main .item select {
+  border: 1px solid var(--text);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #fff;
 }
 
 .sidenav main hr {
-    width: 80%;
-    margin: auto;
+  width: 80%;
+  margin: auto;
 }
 
 .sidenav footer {
-    width: 100%;
+  width: 100%;
 
-    font-size: .9rem;
-    text-align: center;
+  font-size: 0.9rem;
+  text-align: center;
 
-    position: absolute;
-    bottom: 0;
+  position: absolute;
+  bottom: 0;
 }
-
 
 span {
   font-size: 2rem;
