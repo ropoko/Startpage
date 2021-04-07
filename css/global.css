@@ -4,19 +4,53 @@
     box-sizing: border-box;
 }
 
+:root {
+    --text: #1f1e1e;
+    --bg-color: #e9bcca;
+
+    --input-color: #1b1919;
+    --input-bg: #ececec;
+    --input-border: #1f1e1e;
+
+    --switch: #aaaaaa;
+    --switch-text: #1f1e1e;
+
+    --selection-bg: #2d56c7;
+    --selection-text: #ffffff;
+
+    --menu-bg: #fcdfe8;
+}
+
+[data-theme="dark"] {
+    --text: #F5F5F5;
+    --bg-color: #141414;
+
+    --input-color: #EBDFDF;
+    --input-bg: #1f1e1e;
+    --input-border: #d6d4d4;
+
+    --switch: #ffc400;
+    --switch-text: #F5F5F5;
+
+    --selection-bg: rgb(32, 35, 41);
+    --selection-text: #FFA000;
+
+    --menu-bg: #2e2e2e;
+}
+
 ::-moz-selection {
-    background-color: rgb(32, 35, 41);
-    color: #FFA000;
+    background-color: var(--selection-bg);
+    color: var(--selection-text);
 }
 
 ::selection {
-    background-color: rgb(32, 35, 41);
-    color: #FFA000;
+    background-color: var(--selection-bg);
+    color: var(--selection-text);
 }
 
 body {
     font-family: 'JetBrains Mono', monospace;
-    background: rgb(20, 20, 20);
+    background: var(--bg-color);
 }
 
 @media(max-width: 1080px) {

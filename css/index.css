@@ -5,10 +5,7 @@
     justify-content: space-evenly;
 
     flex-direction: column;
-}
-
-.container h2 {
-    color: whitesmoke;
+    color: var(--text)
 }
 
 #search input {
@@ -16,12 +13,12 @@
     font-size: 2rem;
 
     border: none;
-    background-color: #1f1e1e;
-    color: rgb(235, 223, 223);
+    background-color: var(--input-bg);
+    color: var(--input-color);
 }
 
 #search input:focus {
-    outline: none;
+    outline: 1px solid var(--input-border);
 }
 
 #search ul img {
@@ -31,5 +28,5 @@
 #clock {
     font-size: 9rem;
     font-weight: 600;
-    color: whitesmoke;
+    color: var(--text);
 }
