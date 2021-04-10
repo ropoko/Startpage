@@ -72,19 +72,7 @@
   <script type="text/javascript" src="js/toggleTheme.js"></script>
   <script type="text/javascript" src="js/menu.js"></script>
 
-  <script>
-    window.onload = () => {
-      document.getElementById("input_search").focus();
-
-      document.getElementById("clock").innerHTML = getTime();
-      document.getElementById("message").innerText = defineMessage();
-
-      // Set clock interval to tick clock
-      setInterval(() => {
-        document.getElementById("clock").innerHTML = getTime();
-      }, 30000);
-    };
-  </script>
+  <script type="text/javascript" src="js/loader.js"></script>
 
 </body>
 
