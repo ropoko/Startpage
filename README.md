@@ -5,4 +5,4 @@ Minimalist and useful startpage
 
 ## To do
 
-- [] Save the search service selected
+- [ ] Save the search service selected
