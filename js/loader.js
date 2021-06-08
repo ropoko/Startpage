@@ -14,11 +14,8 @@ window.onload = () => {
 };
 
 function getService() {
-  console.log('hi')
   let search_saved = localStorage.getItem('search-service');
   document.getElementById('search_select').value = search_saved;
-
-  console.log(search_saved)
 }
 
 function getTheme() {
