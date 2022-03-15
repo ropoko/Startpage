@@ -15,6 +15,9 @@ window.onload = () => {
 
 function getService() {
   let search_saved = localStorage.getItem('search-service');
+  
+  if (search_saved === null) search_saved = 'https://www.google.com/search?q=';
+  
   document.getElementById('search_select').value = search_saved;
 }
 
